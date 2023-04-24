@@ -1,0 +1,46 @@
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selections-container{
+    display: flex;
+    flex-direction: row;
+    height: 40pt;
+    width: 70%;
+}
+
+.selections-container h1{
+    margin-right: 40pt;
+}
+
+.selections-container h2{
+    margin-left: 15pt;
+    margin-top: 25pt;
+}
+
+.selections-container h2:hover{
+    margin-left: 15;
+    color:#00BFFF;
+}
+
+
+.login-container{
+    display: flex;
+    flex-direction: row;
+    height: 40pt;
+    justify-content: center;
+    margin-top: 25pt;
+}
+
+.login-container h2{
+    margin-left: 30pt;
+}
+
+.login-container h2:hover{
+    margin-left: 30pt;
+    color: #FFA500;
+}

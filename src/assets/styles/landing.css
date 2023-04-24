@@ -1,0 +1,21 @@
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    /* align-items: center; */
+    justify-content: center;
+}
+.landing-container h1{
+    align-self: center;
+    text-align: center;
+    font-size: 35pt;
+    width: 35%;
+}
+
+.landing-container h2{
+    align-self: center;
+    text-align: center;
+    font-size: 16pt;
+    width: 50%;
+}
+
