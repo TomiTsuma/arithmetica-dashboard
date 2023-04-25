@@ -39,6 +39,7 @@ p{
     display: flex;
     flex-direction: column;
     width: 96vw;
+    height: 100%;
     padding-left: 30pt;
     padding-right: 30pt;
     background-image: url('../img/bkg_1.jfif');
