@@ -54,7 +54,7 @@
 
 .side-navbar-container{
     height: 100vh;
-    width: 15vh;
+    width: 10vh;
     background-color: #000000;
     margin-left: -36pt;
     margin-top: -6pt;
@@ -62,4 +62,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.side-navbar-container .icon{
+    height: 15pt;
+    width: undefined;
+    aspect-ratio: 1 / 1;
+    background-color: #000000;
+    margin-top: 20pt;
+}
+
+.side-navbar-container .icon-dashboard{
+    height: 20px;
+    aspect-ratio: 1 / 1;
+    margin-top: 20pt;
+    background: url('../img/dashboard.png');
+    background-size: cover;
+}
+
+.side-navbar-container .bars-icon{
+    height: 12pt;
+    width: undefined;
+    aspect-ratio: 1 / 1;
+    background-color: #000000;
+    margin-top: 20pt;
+}
+
+
+.side-navbar-container .icon:hover{
+    height: 15pt;
+    width: undefined;
+    aspect-ratio: 1 / 1;
+    background-color: #000000;
+    margin-top: 20pt;
+    border-bottom: solid 1pt #00BFFF;
+    border-radius: 5pt;
+    padding: 2pt;
 }
