@@ -93,7 +93,7 @@ export default function Landing(){
             <div className='section-3'>
             <div className='section-3-description'>
             <h1>Let us focus on your KPI metrics.</h1>
-            <p>Are you a startup trying to focus on achieving your KPIs but don’t have the time to monitor them closely? Make use of our Perseus, our startup package, where all the key metrics worth monitoring are already set up.</p>
+            <p>Are you a startup trying to focus on KPIs but lack the time to monitor them closely? Make use of our Perseus, our startup package, where all the key metrics worth monitoring are already set up.</p>
             </div>
             <div className='image'>
             <LineGraphNoBkg data={mrr} width={400} height={100}></LineGraphNoBkg>
