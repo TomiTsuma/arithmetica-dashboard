@@ -59,6 +59,7 @@
     /* margin-left: -36pt;
     margin-top: -6pt; */
     position: fixed;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;

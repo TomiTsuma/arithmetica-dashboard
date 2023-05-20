@@ -36,7 +36,9 @@ p{
     display: flex;
     flex-direction: row;
     width: 98vw;
+    min-height: 100vh;
     background-color: '#02546450';
+    padding-left: 30pt;
 }
 
 button{
