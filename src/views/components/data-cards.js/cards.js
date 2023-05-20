@@ -2,7 +2,7 @@
 import '../../../assets/styles/card.css'
 import { Card } from '@material-ui/core'
 import BarGraph from '../visualizations/bar';
-export default function DataCard(){
+export default function DataCard(props){
     const data = [
         {
           name: 'Page A',
@@ -50,14 +50,13 @@ export default function DataCard(){
     return(
         <Card variant="elevated" raised={true} elevation={1}>
         <div className="card-container">
-        <h2>Monthly Active Users</h2>
+        <h2>{props.title}</h2>
         <BarGraph
+        color={"#FFFFFF"}
         data = {data}
         width = {50}
         height = {35}></BarGraph>
         </div>
         </Card>
-        
-
     )
 }

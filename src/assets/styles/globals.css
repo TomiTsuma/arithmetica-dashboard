@@ -31,16 +31,12 @@ h2{
 p{
     font-family: 'Catamaran-Light';
     font-size: 16pt;
-    margin: 20px 60px;
-    text-align: center;
-    align-self: center;
 }
 .container{
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    padding-left: 30pt;
-    padding-right: 30pt;
+    width: 98vw;
+    background-color: '#02546450';
 }
 
 button{
@@ -58,4 +54,159 @@ button{
 
 button:hover {
     transform: scale(1.05);
+}
+
+.analytics-container{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10pt;
+}
+
+.analytics-container .mrr-growth-container {
+    padding: 10pt;
+    border: solid 1pt #C2C2C2;
+    border-radius: 5pt;
+    margin: 5pt;
+    width: 95%;
+}
+
+.analytics-container .mrr-growth-container h2{
+    font-size: 1rem;
+    color: #0a07b3;
+}
+
+.analytics-container .mrr-growth-container p{
+    font-size: 1rem;
+    color: #C2C2C2;
+}
+
+.analytics-container .mrr-growth-container .description-container{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.analytics-container .mrr-growth-container .description-container .mrr-description{
+    width: 40%;
+}
+
+.analytics-container .mrr-growth-container .description-container .mrr-description p{
+    color: black;
+    margin: 0pt;
+    font-size: 0.6rem;
+}
+
+.analytics-container .mrr-growth-container .description-container .mrr-description h2{
+    color: black;
+    margin: 0pt;
+    font-size: 0.8rem;
+}
+
+.analytics-container .mrr-growth-container .description-container .mrr-description h1{
+    color: black;
+    margin: 0pt;
+    font-size: 0.6rem;
+}
+
+.top-cards-container{
+    width: 100%;
+    height: undefined;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.financial-monitoring-container{
+    width: 25vw;
+    height: 70vh;
+    border: solid 1pt #c2c2c260;
+    border-radius: 5pt;
+    padding: 10pt;
+    margin-top: 10pt;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.financial-monitoring-container h2{
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 0pt;
+}
+
+.financial-monitoring-container p{
+    color: black;
+    font-size: 0.8rem;
+    align-self: flex-start;
+    margin-top: 0pt;
+    text-align: left;
+}
+
+.financial-monitoring-container .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 2px;
+    width: 80%;
+}
+.financial-monitoring-container .grid-item {
+padding: 5px;
+font-size: 30px;
+text-align: center;
+}
+
+.grid-container .grid-item h1{
+    font-size: 0.8rem;
+}
+
+.grid-container .grid-item h2{
+    font-size: 0.6rem;
+}
+
+.financial-monitoring-container .financial-monitoring-graphs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10pt;
+}
+
+.financial-monitoring-container .financial-monitoring-graphs h1{
+    rotate: 270deg;
+    font-size: 0.8rem;
+}
+
+.financial-monitoring-container .financial-monitoring-graphs .bar-graph-container{
+    rotate: 90deg;
+}
+
+.data-sources-container{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    padding: 10pt;
+    margin-left: 80pt;
+}
+
+.data-sources-container .search-container{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data-sources-container .data-sources-list{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+}
+
+.data-sources-container .data-sources-list h2{
+    color: black;
 }
