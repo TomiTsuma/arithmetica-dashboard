@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Catamaran-ExtraBold';
+    src: url('../font/Catamaran-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-Bold';
+    src: url('../font/Catamaran-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-Medium';
+    src: url('../font/Catamaran-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-Black';
+    src: url('../font/Catamaran-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-Regular';
+    src: url('../font/Catamaran-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-Light';
+    src: url('../font/Catamaran-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-ExtraLight';
+    src: url('../font/Catamaran-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Catamaran-SemiBold';
+    src: url('../font/Catamaran-SemiBold.ttf');
+}
+
+h1{
+    font-family: 'Catamaran-ExtraBold';
+    font-size: 2.5rem;
+    color: #070600;
+}
+
+h2{
+    font-family: 'Catamaran-ExtraLight';
+    font-size: 1.5rem;
+    color: #02020B;
+}
+
+h3{
+    font-family: 'Catamaran-Regular';
+    font-size: 1.3rem;
+    color: #02020B;
+}
+
+p{
+    font-family: 'Catamaran-Regular';
+    font-size: 0.8rem;
+    color: #9ea3b0;
+}
+
