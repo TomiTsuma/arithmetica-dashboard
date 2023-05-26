@@ -1,0 +1,34 @@
+.card-container{
+    width: 170pt;
+    height: undefined;
+    aspect-ratio: 2 / 2.2;
+    background-color: '#FFFFFF';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5pt;
+    background-image: linear-gradient(to bottom, #1D267D , #1D267D70);
+}
+
+h2{
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+
+.data-source-card-container{
+    height: undefined;
+    aspect-ratio: 2/2.5;
+    background-color: '#FFFFFF';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data-source-card-container .data-source-card-title{
+    background-color: #FFFFFF;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1pt #C2C2C230;
+    padding: 5pt;
+}

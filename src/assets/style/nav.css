@@ -37,3 +37,38 @@
     height: 40pt;
     width: 100vw;
 }
+
+.side-navbar-container{
+    height: 100vh;
+    width: 10vh;
+    background-color: #025464;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 50pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.side-navbar-container .logo{
+    background-image: url('../../assets/img/robodine.png');
+    background-size: cover;
+    height: 50pt;
+    width: 50pt;
+    border-radius: 50pt;
+    margin-bottom: 20pt;
+
+}
+
+.side-navbar-container .icon{
+    height: 40pt;
+    width: undefined;
+    aspect-ratio: 1 / 1;
+    margin-top: 10pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

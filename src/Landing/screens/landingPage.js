@@ -42,7 +42,6 @@ export default function LandingPage(){
                 <h2>
                 We provide state-of-the art data visualizations that help you get a real view of all the trends in company & industry data.
                 Our Machine Learning models provide accurate predictions to help you see into the future of your company. 
-                The icing on the cake is the descriptive analytics that help you understand your company success and how to replicate it or how to remedy any failures
                 </h2>
                 <div style={{alignItems:'center',alignSelf:'center',width:'60%', display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
                 <GradientButton title='Book a Demo'></GradientButton>
@@ -72,8 +71,8 @@ export default function LandingPage(){
         </div>
         </div>
         <div className="section-4">
-            <h1>A Cohesive Data Sourcing & Analytics Center for your Business</h1>
-            <p>Core&Outline connects brings together all your data sources into one cohesive data network ensuring you can gain insights into all your data sources all at once.</p>
+            <h1>A Cohesive Data Sourcing & Analytics Platform for your Business</h1>
+            <p>Core&Outline connects all your data sources into one cohesive data network ensuring you can gain insights into all your data.</p>
             <div className="data-network-container"></div>
             <OutlineButton title={'Start Integration'}></OutlineButton>
         </div>
