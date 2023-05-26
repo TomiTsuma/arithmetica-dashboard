@@ -6,6 +6,7 @@ import DataSourceCard from "../components/data-source-card/dataSourceCard"
 import { useState, useEffect } from 'react'
 import MongoDBAccordion from "../components/accordions/mongodb-atlas"
 import AWSAccordion from "../components/accordions/aws-accordion"
+import CSVAccordion from "../components/accordions/csv-accordion"
 
 export default function DataSources(){
     const [dataSources, setDataSources] = useState([])
@@ -72,6 +73,7 @@ export default function DataSources(){
         <div className="data-sources-accordion">
                 <MongoDBAccordion></MongoDBAccordion>
                 <AWSAccordion></AWSAccordion>
+                <CSVAccordion></CSVAccordion>
             </div>
         </div>
     )    
