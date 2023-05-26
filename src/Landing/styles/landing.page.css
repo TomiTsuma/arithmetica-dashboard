@@ -112,7 +112,7 @@
     height: 66vh;
     width: 55vw;
     background-image: url('../../assets/img/data-sources.png');
-    background-size: cover;
+    background-size: 100% 100%;
  }
 
  .section-5{

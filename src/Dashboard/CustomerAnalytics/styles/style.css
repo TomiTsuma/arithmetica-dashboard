@@ -1,0 +1,75 @@
+.container{
+    width: 86.7vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    margin-left: 4.6vw;
+    margin-top: -1vh;
+    background-color: #02546410;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50pt;
+    padding-right: 50pt;
+    padding-top: 50pt;
+}
+
+.customer-segmentation-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.customer-location-transaction-container{
+    background-color: #fbfffe;
+    border-radius: 8pt;
+    width: 100%;
+}
+
+.customer-location-transaction-container .section{
+    width: 100%;
+    border-top: solid 1pt #C2C2C2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15pt;
+    padding-bottom: 15pt;
+}
+
+.customer-location-transaction-container .section:hover{
+    background-color: #C2C2C250;
+    width: 100%;
+    border-top: solid 1pt #C2C2C260;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15pt;
+    padding-bottom: 15pt;
+}
+
+.customer-location-transaction-container .section h2{
+    color: #070600;
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 15pt;
+    font-size: 1.2rem;
+
+}
+
+
+
+.column-title{
+    color: #070600;
+    font-size: 1.5rem;
+}
+
+.column-value{
+    color: #070600;
+    font-size: 1.2rem;
+}
+
