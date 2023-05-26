@@ -1,12 +1,11 @@
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Paper } from '@material-ui/core'
-import { Height } from '@material-ui/icons'
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Paper } from '@mui/material'
 
 const inst = '{\n"Version": "2012-10-17",\n"Statement": [\n{\n"Action": [\n "rds:Describe*",\n"rds:List*",\n"pi:DescribeDimensionKeys",\n"pi:GetResourceMetrics",\n"cloudwatch:Get*",\n"cloudwatch:List*",\n"cloudwatch:Describe*",\n"ce:Get*",\n"ce:List*",\n"ce:Describe*",\n"budgets:Describe*",\n"iam:SimulatePrincipalPolicy"\n],\n"Resource": [\n    "*"\n],\n"Effect": "Allow"\n},\n{\n"Action": [\n    "rds-db:connect"\n],\n"Resource": [\n    "arn:aws:rds-db:*:*:dbuser:*/core&outline*"\n],\n"Effect": "Allow"\n}\n]\n}'
 export default function AWSAccordion(){
     return(
         <Accordion>
             <AccordionSummary aria-controls="accordion-content" id="accordion-header">
-                <h1 style={{marginTop:'5pt',fontSize:'1.2rem'}}>
+                <h1 style={{marginTop:'5pt', marginBottom:'5pt',fontSize:'1.5rem'}}>
                     AWS IAM Console
                 </h1>
             </AccordionSummary>
@@ -17,15 +16,15 @@ export default function AWSAccordion(){
                 <h2 style={{color:"#000", fontSize:'1rem'}}>Create an IAM Role from your AWS IAM Console. Specify another Account ID as the trusted entity and enter in the Core&Outline Account ID below. Select ‘Require External ID’ and enter in the External ID below.</h2>
                 
                 <div style={{display: 'flex', flexDirection:'row', width:"40%", justifyContent:'space-between', alignItems:'center'}}>
-                    <p>Core&Outline ID:</p>
+                    <p style={{color:"#C2C2C2", fontSize:'1rem'}}>Core&Outline ID:</p>
                     <div style={{backgroundColor:'#025464', width:'200pt', height:'30pt', borderRadius:'5pt', display:"flex", justifyContent:'center', alignItems:'center'}}>
-                        <p style={{color:'white', fontFamily:'monospace'}}>62345445611921</p>
+                        <p style={{color:'white', fontFamily:'monospace',  fontSize:'1rem'}}>62345445611921</p>
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection:'row', width:"60%", justifyContent:'space-between', alignItems:'center'}}>
-                    <p>External ID:</p>
+                <p style={{color:"#C2C2C2", fontSize:'1rem'}}>External ID:</p>
                     <div style={{backgroundColor:'#025464', width:'400pt', height:'30pt', borderRadius:'5pt', display:"flex", justifyContent:'center', alignItems:'center'}}>
-                        <p style={{color:'white', fontFamily:'monospace'}}>ea492eeb-4cb2-4caa-a8c8-6449b0b39dc9</p>
+                        <p style={{color:'white', fontFamily:'monospace', fontSize:'1rem'}}>ea492eeb-4cb2-4caa-a8c8-6449b0b39dc9</p>
                     </div>
                 </div>
                 </li>

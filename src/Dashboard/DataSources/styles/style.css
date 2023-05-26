@@ -1,0 +1,80 @@
+.container{
+    width: 86.7vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    margin-left: 4.6vw;
+    margin-top: -1vh;
+    background-color: #02546410;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50pt;
+    padding-right: 50pt;
+    padding-top: 50pt;
+}
+
+.search-container{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data-source-card-container{
+    height: undefined;
+    aspect-ratio: 2/2;
+    background-color: '#FFFFFF';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data-source-card-container .data-source-card-title{
+    background-color: #FFFFFF;
+    width: 95%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1pt #C2C2C230;
+    padding: 5pt;
+}
+
+.data-source-card-container .data-source-card-viz{
+    background-color: #C2C2C2;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1pt #C2C2C230;
+    opacity: 0.3;
+    padding: 5pt;
+}
+
+.data-source-card-container .data-source-card-viz:hover{
+    background-color: #04e824;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1pt #C2C2C230;
+    opacity: 0.8;
+    z-index: 1;
+    padding: 5pt;
+}
+
+
+
+.data-sources-list{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+}
+
+.data-sources-list h2{
+    color: black;
+}

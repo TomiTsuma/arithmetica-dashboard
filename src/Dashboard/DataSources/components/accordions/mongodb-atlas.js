@@ -1,9 +1,9 @@
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@material-ui/core'
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material'
 export default function MongoDBAccordion(){
     return(
         <Accordion>
             <AccordionSummary aria-controls="accordion-content" id="accordion-header">
-                <h1 style={{margin:'0pt', fontSize:'1.2rem'}}>
+                <h1 style={{margin:'0pt', fontSize:'1.5em'}}>
                     MongoDB Atlas
                 </h1>
             </AccordionSummary>
