@@ -1,0 +1,57 @@
+.container{
+    width: 86.7vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    margin-left: 4.6vw;
+    margin-top: -1vh;
+    background-color: #02546410;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50pt;
+    padding-right: 50pt;
+    padding-top: 50pt;
+    padding-bottom: 50pt;
+}
+
+.forecasting-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-forecast-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #fbfffe;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    padding-left: 30pt;
+    padding-right: 30pt;
+    border-radius: 8pt;
+    margin-top: 30pt;
+}
+
+.metric-title{
+    color: #C2C2C2;
+    font-family: 'Catamaran-Bold';
+    font-size: 1.5rem;
+
+}
+
+.forecasting-parameter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.forecasting-parameter h2{
+    color: #C2C2C2;
+    font-size: 1.2rem;
+}

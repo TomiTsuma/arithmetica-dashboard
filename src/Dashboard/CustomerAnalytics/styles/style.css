@@ -73,3 +73,35 @@
     font-size: 1.2rem;
 }
 
+
+.customer-metrics-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.metrics-subtitle h2{
+    color: #070600;
+    font-size: 1.5rem;
+    margin-bottom: 0pt;
+}
+
+.metric p{
+    color: #070600;
+    font-size: 1rem;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+.metric:hover{
+    background-color: #1B2CC120;
+    width: 80%;
+    padding-left: 10pt;
+    border-radius: 5pt;
+}
+
+.metric{
+    padding-left: 10pt;
+    width: 80%;
+}
