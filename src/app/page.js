@@ -9,7 +9,7 @@ import SideNav from "@/components/side-nav";
 
 export default function Home() {
   return(
-    <LandingPage></LandingPage>
+    <Dashboard></Dashboard>
   )
 }
 

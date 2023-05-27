@@ -118,8 +118,8 @@ export default function TransactionAnalytics(){
                             <BarGraph
                             color={['#04e824', '#FF3C38', '#1B2CC1', '#fe9000']}
                             data = {transaction}
-                            width = {900}
-                            height = {500}
+                            width = {'100%'}
+                            height = {300}
                             x = {['uv','pv','cv', 'dv']}></BarGraph>
                         </div>
                     </div>         

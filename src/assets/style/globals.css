@@ -40,25 +40,21 @@
 
 h1{
     font-family: 'Catamaran-ExtraBold';
-    font-size: 2.5rem;
     color: #070600;
 }
 
 h2{
     font-family: 'Catamaran-ExtraLight';
-    font-size: 1.5rem;
     color: #02020B;
 }
 
 h3{
     font-family: 'Catamaran-Regular';
-    font-size: 1.3rem;
     color: #02020B;
 }
 
 p{
     font-family: 'Catamaran-Regular';
-    font-size: 0.8rem;
     color: #9ea3b0;
 }
 

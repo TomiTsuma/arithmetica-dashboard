@@ -351,7 +351,7 @@ export default function Forecasting(){
                         <BarGraph
                             color={["#1B2CC1"]}
                             data = {revenueForecast}
-                            width = {700}
+                            width = {'100%'}
                             height = {500}
                             showCartesianGrid = {false}
                             x = {['uv']}></BarGraph>
@@ -382,7 +382,7 @@ export default function Forecasting(){
                         
                     </div>
 
-                    <div style={{ width: '60%', display:'flex', flexDirection:'column', justifyContent:'space between', alignItems:'flex-end' }}>
+                    <div style={{ width: '60%', display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'flex-end', height:'100%' }}>
                         <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
                             <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
                             <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
@@ -390,10 +390,10 @@ export default function Forecasting(){
                         <LineGraph
                             keys = {['pv']}
                             data = {mrrForecast}
-                            width = {800}
+                            width = {600}
                             xaxis = {'name'}
                             yaxis = {'uv'}
-                            height = {500}></LineGraph>
+                            height = {400}></LineGraph>
                     
 
                     </div>
@@ -421,7 +421,7 @@ export default function Forecasting(){
                         
                     </div>
 
-                    <div style={{ width: '60%', display:'flex', flexDirection:'column', justifyContent:'space between', alignItems:'flex-end' }}>
+                    <div style={{ width: '60%', display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'flex-end', height:'100%' }}>
                         <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
                             <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
                             <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
@@ -429,10 +429,10 @@ export default function Forecasting(){
                         <LineGraph
                             keys = {['uv']}
                             data = {mrrForecast}
-                            width = {800}
+                            width = {600}
                             xaxis = {'name'}
                             yaxis = {'uv'}
-                            height = {500}></LineGraph>
+                            height = {400}></LineGraph>
                     
 
                     </div>

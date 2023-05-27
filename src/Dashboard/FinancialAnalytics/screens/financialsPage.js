@@ -116,15 +116,15 @@ export default function Financials(){
         },
     ];
     return(
-        <div className='container'>
+        <div className='section-container'>
                 <h1>Robodine</h1>
                 <div style={{ width:'100%', display: "flex", flexDirection:"row", justifyContent:'space-between' }}>
-                    <div style={{ width:'60vw', display: "flex", flexDirection:"column" , alignItems:'flex-start'}}>
+                    <div style={{ width:'65%', display: "flex", flexDirection:"column" , alignItems:'flex-start'}}>
                         <div style={{ width:'100%', display: "flex", flexDirection:"row", justifyContent:'space-between' }}>
-                            <DataCard title={'Monthly Recurring Revenue'} x={['uv']} width={150} height={100} type='bar' data={data}></DataCard>
-                            <DataCard title={'Average Contract Value'} x={['uv']} width={150} height={100} type='bar' data={data}></DataCard>
-                            <DataCard title={'Monthly Gross Value'} x={['uv']} width={150} height={100} type='bar' data={data}></DataCard>
-                            <DataCard title={'Monthly Net Value'} x={['uv']} width={150} height={100} type='bar' data={data}></DataCard>
+                            <DataCard title={'Monthly Recurring Revenue'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
+                            <DataCard title={'Average Contract Value'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
+                            <DataCard title={'Monthly Gross Value'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
+                            <DataCard title={'Monthly Net Value'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
                         </div>
                         <div className="mrr-growth-container">
                             <h2>ACCOUNT & MONTHLY RECURRING REVENUE GROWTH</h2>
@@ -144,7 +144,7 @@ export default function Financials(){
                             <LineGraph
                             keys = {['uv','pv']}
                             data = {mrr}
-                            width = {800}
+                            width = {'100%'}
                             xaxis = {'name'}
                             yaxis = {'uv'}
                             height = {400}></LineGraph>

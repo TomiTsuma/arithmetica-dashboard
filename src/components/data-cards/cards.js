@@ -14,9 +14,9 @@ export default function DataCard(props){
   
 
     return(
-        <Card variant="elevated" raised={true} elevation={1}>
-          <div className="card-container">
-            <h2 style={{fontSize:'1rem'}}>{props.title}</h2>
+        <Card variant="elevated" raised={true} elevation={1} style={{margin:'5pt'}}>
+          <div className="card-container" style={{width: '170pt'}}>
+            <h2>{props.title}</h2>
             {
               props.type == 'bar'?
                 <BarGraph

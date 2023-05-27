@@ -1,7 +1,7 @@
 .card-container{
     width: 170pt;
     height: undefined;
-    aspect-ratio: 2 / 2.2;
+    aspect-ratio: 2 / 1.5;
     background-color: '#FFFFFF';
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     background-image: linear-gradient(to bottom, #1D267D , #1D267D70);
 }
 
-h2{
+.card-container h2{
     font-size: 0.8rem;
     color: #FFFFFF;
 }
