@@ -185,11 +185,11 @@ export default function Financials(){
                         
                         <div className="bar-graph-container">
                         <BarGraph
-                            color={"#000"}
+                            color={["#000"]}
                             data = {data}
                             width = {90}
                             height = {70}
-                            x = {'uv'}></BarGraph>
+                            x = {['uv']}></BarGraph>
                         </div>
                     </div>
                     <div class="financial-monitoring-graphs">
@@ -198,11 +198,11 @@ export default function Financials(){
                         </div>
                         <div className="bar-graph-container">
                         <BarGraph
-                            color={"#000"}
+                            color={["#000"]}
                             data = {data}
                             width = {90}
                             height = {70}
-                            x = {'pv'}></BarGraph>
+                            x = {['pv']}></BarGraph>
                         </div>
                     </div>
                     <div class="financial-monitoring-graphs">
@@ -211,11 +211,11 @@ export default function Financials(){
                         </div>
                         <div className="bar-graph-container">
                             <BarGraph
-                            color={"#000"}
+                            color={["#000"]}
                             data = {data}
                             width = {90}
                             height = {70}
-                            x = {'cv'}></BarGraph>
+                            x = {['cv']}></BarGraph>
                         </div>
                     </div>
                     <div class="financial-monitoring-graphs">
@@ -224,11 +224,11 @@ export default function Financials(){
                         </div>
                         <div className="bar-graph-container">
                             <BarGraph
-                            color={"#000"}
+                            color={["#000"]}
                             data = {data}
                             width = {90}
                             height = {70}
-                            x = {'dv'}></BarGraph>
+                            x = {['dv']}></BarGraph>
                         </div>
                     </div>
                 </div>                        

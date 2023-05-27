@@ -1,7 +1,7 @@
 'use client'
 import "../styles/style.css"
 import { useEffect, useState } from "react"
-import { faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { faSortDown, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BarGraph from "@/components/visualizations/bar";
 export default function TransactionAnalytics(){
@@ -104,8 +104,14 @@ export default function TransactionAnalytics(){
                         </div>
 
                         <div style={{display:'flex', flexDirection:'row', alignSelf:'flex-end', alignItems:'flex-start', margin:'5pt', marginRight:'10pt'}}>
+                            <div style={{display:'flex', flexDirection:'row', alignItems:'center', marginRight:'30pt'}}>
+                                <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
+                                <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
+                            </div>
+
                             <h2 style={{color:"#C2C2C2", fontSize:'1.2rem', marginRight:'10pt',marginTop:'0pt', marginBottom:'0pt'}}>Monthly</h2>
                             <FontAwesomeIcon icon={faSortDown}></FontAwesomeIcon>
+                            
                         </div>
 
                         <div>

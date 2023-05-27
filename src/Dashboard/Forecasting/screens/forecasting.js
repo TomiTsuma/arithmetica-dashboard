@@ -349,12 +349,12 @@ export default function Forecasting(){
                             <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
                         </div>
                         <BarGraph
-                            color={"#1B2CC1"}
+                            color={["#1B2CC1"]}
                             data = {revenueForecast}
                             width = {700}
                             height = {500}
                             showCartesianGrid = {false}
-                            x = {'uv'}></BarGraph>
+                            x = {['uv']}></BarGraph>
                     
 
                     </div>

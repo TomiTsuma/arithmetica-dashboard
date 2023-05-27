@@ -20,7 +20,7 @@ export default function DataCard(props){
             {
               props.type == 'bar'?
                 <BarGraph
-                  color={"#FFFFFF"}
+                  color={["#FFFFFF"]}
                   data = {props.data}
                   width = {props.width}
                   height = {props.height}
