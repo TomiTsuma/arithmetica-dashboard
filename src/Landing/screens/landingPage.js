@@ -36,7 +36,7 @@ export default function LandingPage(){
         <Nav style={{backgroundColor: navColor}}/>
         <div className="section-1">
                 <h1>
-                    Unlock the true potential of your business data
+                    Your very own, Fully-Furnished Data Analytics and Prediction Platform
                 </h1>
 
                 <h2>

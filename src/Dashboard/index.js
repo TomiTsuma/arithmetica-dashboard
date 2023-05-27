@@ -13,7 +13,7 @@ export default function Dashboard(){
         <SideNav></SideNav>
             <Routes>
                 <Route path='/'>
-                    <Route index element={<Financials/>}></Route>
+                    <Route index element={<LandingPage/>}></Route>
                 </Route>
             </Routes>
         </BrowserRouter>
