@@ -4,6 +4,7 @@ import SideNav from "@/components/side-nav"
 import DataSources from "./DataSources/screens/dataSources"
 import CustomerAnalytics from "./CustomerAnalytics/screens/customerAnalytics"
 import Forecasting from "./Forecasting/screens/forecasting"
+import TransactionAnalytics from "./TransactionAnalytics/screens/transactionAnalytics"
 
 export default function Dashboard(){
     return(
@@ -11,7 +12,7 @@ export default function Dashboard(){
         <SideNav></SideNav>
             <Routes>
                 <Route path='/'>
-                    <Route index element={<Forecasting/>}></Route>
+                    <Route index element={<TransactionAnalytics/>}></Route>
                 </Route>
             </Routes>
         </BrowserRouter>

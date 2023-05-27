@@ -1,0 +1,77 @@
+.container{
+    width: 86.7vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    margin-left: 4.6vw;
+    margin-top: -1vh;
+    background-color: #02546410;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50pt;
+    padding-right: 50pt;
+    padding-top: 50pt;
+}
+
+.transaction-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.transaction-classes-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.transaction-analytics-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.transaction-classes-grid{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
+    padding: 2px;
+    width: 80%;
+
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10pt;
+    width: 50%;
+}
+.grid-item h1{
+    font-size: 2.0rem;
+    margin-right: 10pt;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+}
+
+.grid-item h2{
+    font-size: 1.5rem;
+    margin-right: 0pt;
+    color: #C2C2C2;
+    margin: 0pt;
+}
+
+.transaction-breakdown-container{
+    background-color: #fbfffe;
+    border-radius: 8pt;
+    padding: auto;
+    min-height: 30vh;
+    width: 90%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}

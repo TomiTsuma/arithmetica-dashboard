@@ -1,26 +1,37 @@
-import { BarChart, ResponsiveContainer, Bar, Tooltip, CartesianGrid } from "recharts";
-import { useEffect } from "react";
+import { BarChart, ResponsiveContainer, Bar, Tooltip, CartesianGrid, Legend } from "recharts";
+import { useEffect, useState } from "react";
 
 
 export default function BarGraph(props){
+    const [barProps, setBarProps] = useState([])
     useEffect(() => {
-      console.log(props)
+        
+        setBarProps(props.x.map((element, index)=>{
+            return { x:element, color:props.color[index]}
+        }))
     
+        console.log(barProps)
       return () => {
         
       }
     }, [])
     
     return(
-        <ResponsiveContainer width={props.width} height={props.height}>
+        <ResponsiveContainer width={props.width} height={props.height} >
             <BarChart data={props.data}>
-                <Bar dataKey={props.x} fill={props.color} />
+            {
+                barProps.map((bar)=>{
+                    return <Bar key={bar.x} dataKey={bar.x} fill={bar.color} />
+                })
+            }
+                
                 {
                     props.showCartesianGrid == true?
                     <CartesianGrid strokeDasharray="3 3" />
                     :
                     null
                 }
+                <Legend />
             </BarChart>
         </ResponsiveContainer>
     )

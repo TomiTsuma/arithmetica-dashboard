@@ -12,19 +12,18 @@ export default function SideNav(){
                 <FontAwesomeIcon icon={faDatabase} color="#fbfffe" style={{fontSize:'24pt'}}/>
             </div>
             <div className="icon">
-                <FontAwesomeIcon icon={faChartPie} color="#fbfffe" style={{fontSize:'24pt'}}/>
-            </div>
-            <div className="icon">
                 <FontAwesomeIcon icon={faUser} color="#fbfffe" style={{fontSize:'24pt'}}/>
             </div>
             <div className="icon">
                 <FontAwesomeIcon icon={faLineChart} color="#fbfffe" style={{fontSize:'24pt'}}/>
             </div>
-            <div className="icon">
-                <FontAwesomeIcon icon={faMobile} color="#fbfffe" style={{fontSize:'24pt'}}/>
-            </div>
+            
             <div className="icon">
                 <FontAwesomeIcon icon={faMoneyBill} color="#fbfffe" style={{fontSize:'24pt'}}/>
+            </div>
+
+            <div className="icon">
+                <FontAwesomeIcon icon={faMobile} color="#fbfffe" style={{fontSize:'24pt'}}/>
             </div>
 
 
