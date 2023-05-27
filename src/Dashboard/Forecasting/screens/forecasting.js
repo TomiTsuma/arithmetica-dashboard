@@ -8,9 +8,9 @@ import TextInput from "@/components/textField"
 
 export default function Forecasting(){
     const [revenueForecast, setRevenueForecast] = useState([])
-    const [mrrForecast, setMRRForecast] = useState()
-    const [userForecast, setUserForecast] = useState()
-    const [churnForecast, setChurnForecast] = useState()
+    const [mrrForecast, setMRRForecast] = useState([])
+    const [userForecast, setUserForecast] = useState([])
+    const [churnForecast, setChurnForecast] = useState([])
     const [timeUnit, setTimeUnit] = useState({
         unit: 'Months',
         steps: 6,

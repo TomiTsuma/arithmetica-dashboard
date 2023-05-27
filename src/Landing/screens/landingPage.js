@@ -1,6 +1,6 @@
 'use client'
 import Nav from "@/components/nav"
-import "../styles/landing.page.css"
+import "../styles/style.css"
 import GradientButton from "../../components/button"
 import { useRef, useEffect, useState } from "react"
 import OutlineButton from "@/components/outline-button"
@@ -30,7 +30,7 @@ export default function LandingPage(){
     
 
     return(
-        <div className="container">
+        <div className="landing-container">
         
         <div className="nav-section-1"></div>
         <Nav style={{backgroundColor: navColor}}/>
@@ -87,7 +87,7 @@ export default function LandingPage(){
         <div className="section-6">
         <div style={{display:"flex", flexDirection:'column', height:'40vh', justifyContent:'space-between'}}>
         <h1>core&outline</h1>
-        <p>© 2023 Keen Privacy  Policy  Terms of Service</p>
+        <p>© 2023 Core&Outline Privacy  Policy  Terms of Service</p>
         </div>
         <div style={{display:"flex", flexDirection:'column', height:'30vh'}}>
             <h2>Platform</h2>

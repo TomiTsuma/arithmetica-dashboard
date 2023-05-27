@@ -31,7 +31,6 @@ export default function BarGraph(props){
                     :
                     null
                 }
-                <Legend />
             </BarChart>
         </ResponsiveContainer>
     )

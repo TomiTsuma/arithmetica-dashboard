@@ -1,6 +1,5 @@
 'use client'
 import "../assets/style/nav.css"
-import "../assets/style/globals.css"
 import GradientButton from "./button"
 export default function Nav(props)
 {

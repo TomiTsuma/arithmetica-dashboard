@@ -5,7 +5,7 @@ import CustomerSegments from "../components/CustomerSegments/customerSegments"
 import CustomerMetrics from "../components/CustomerMetrics/customerMetrics"
 
 export default function CustomerAnalytics(){
-    const [tabShown, setTabShown] = useState('customer_metrics')
+    const [tabShown, setTabShown] = useState('customer_segmentation')
 
     return(
         <div className="container">

@@ -1,5 +1,5 @@
-.container{
-    width: '100%';
+.landing-container{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -34,6 +34,11 @@
     -webkit-text-fill-color: transparent;
  }
 
+ .section-1 h2{
+   color: #070600;
+   font-size: 1.5rem;
+ }
+
 
  .section-2{
     width: 165vh;
@@ -46,6 +51,7 @@
     background-image: url('../../assets/img/dashboard.png');
     background-size: cover;
     border-radius: 5pt;
+    
  
  }
 
@@ -67,6 +73,11 @@
     align-items: center;
     margin-top: 100pt;
 }
+
+.section-3 h2{
+   color: #070600;
+   font-size: 1.5rem;
+ }
 
 .testimonial-icon{
     background-image: url('../../assets/img/robodine.png');
@@ -97,6 +108,7 @@
     -webkit-text-fill-color: transparent;
     width: 50%;
     text-align: center;
+    margin-bottom: 0pt;
  }
 
  .section-4 p{
@@ -106,6 +118,7 @@
     -webkit-text-fill-color: transparent;
     width: 50%;
     text-align: center;
+    margin-top: 5pt;
  }
 
  .section-4 .data-network-container{
@@ -136,6 +149,7 @@
     background: linear-gradient(to right, #025464, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
  }
 
  .section-5 p{

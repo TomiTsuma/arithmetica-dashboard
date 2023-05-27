@@ -5,6 +5,7 @@ import DataSources from "./DataSources/screens/dataSources"
 import CustomerAnalytics from "./CustomerAnalytics/screens/customerAnalytics"
 import Forecasting from "./Forecasting/screens/forecasting"
 import TransactionAnalytics from "./TransactionAnalytics/screens/transactionAnalytics"
+import LandingPage from "@/Landing/screens/landingPage"
 
 export default function Dashboard(){
     return(
