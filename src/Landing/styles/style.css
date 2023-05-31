@@ -134,6 +134,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 100pt;
+    margin-bottom: 100pt;
  }
 
  .section-5 .testimonial-img{
