@@ -1,15 +1,19 @@
 'use client'
-import { createRoot } from "react-dom/client";
-import pageStyles from './page.module.css'
-import {LandingPage} from '@/Landing/index.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "@/Dashboard";
 import SideNav from "@/components/side-nav";
+import Financials from "@/Dashboard/FinancialAnalytics/screens/financialsPage";
 
 
 export default function Home() {
   return(
-    <Dashboard></Dashboard>
-  )
+    <BrowserRouter>
+    <SideNav></SideNav>
+        <Routes>
+            <Route path='/'>
+                <Route index element={<Financials/>}></Route>
+            </Route>
+        </Routes>
+    </BrowserRouter>
+)
 }
 

@@ -1,9 +1,11 @@
 'use client'
 import DataCard from "@/components/data-cards/cards"
 import "../styles/style.css"
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import LineGraph from "@/components/visualizations/line";
 import BarGraph from "@/components/visualizations/bar";
+import { useState, useEffect} from 'react'
+import { DataSourceSelection } from "../../DataSources/components/dataSourceSelection";
 
 
 export default function Financials(){
@@ -115,9 +117,26 @@ export default function Financials(){
             amt: 2100,
         },
     ];
+
+    const [MRR, setMRR] = useState([])
+    const [averContractValue, setAverContractValue] = useState([])
+    const [monthlyGrossValue, setMonthlyGrossValue] = useState([])
+    const [monthlyNetValue, setMonthlyNetValue] = useState([])
+    const [dataSourcesWidgetVisible, showDataSourcesWidget] = useState(false) 
+
+    const selectDataSource=()=>{
+
+    }
     return(
         <div className='section-container'>
                 <h1>Robodine</h1>
+                {
+                    dataSourcesWidgetVisible?
+                    <DataSourceSelection></DataSourceSelection>
+                    :
+                    null
+                }
+                
                 <div style={{ width:'100%', display: "flex", flexDirection:"row", justifyContent:'space-between' }}>
                     <div style={{ width:'65%', display: "flex", flexDirection:"column" , alignItems:'flex-start'}}>
                         <div style={{ width:'100%', display: "flex", flexDirection:"row", justifyContent:'space-between' }}>

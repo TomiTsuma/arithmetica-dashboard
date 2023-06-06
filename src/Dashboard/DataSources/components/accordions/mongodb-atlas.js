@@ -18,22 +18,22 @@ export default function MongoDBAccordion(){
                             <p>From the Atlas dashboard, select your project.</p>
                         </li>
                         <li>
-                            <p>In the left-hand navigation pane, click on "Database Access" under the "Security" section.</p>
+                            <p>In the left-hand navigation pane, click on &quot;Database Access&quot; under the &quot;Security&quot; section.</p>
                         </li>
                         <li>
-                            <p>Click the "Add New Database User" button.</p>
+                            <p>Click the &quot;Add New Database User&quot; button.</p>
                         </li>
                         <li>
                             <p>Enter a username and password for the new user. Make sure to use a strong password.</p>
                         </li>
                         <li>
-                            <p>Choose the desired authentication method. You can select either "Password" or "AWS IAM Database Authentication" depending on your requirements. For most cases, the "Password" option is appropriate.</p>
+                            <p>Choose the desired authentication method. You can select either &quot;Password&quot; or &quot;AWS IAM Database Authentication&quot; depending on your requirements. For most cases, the &quot;Password&quot; option is appropriate.</p>
                         </li>
                         <li> 
-                            <p>Under the "Database User Privileges" section, you can define the user's privileges. Select the appropriate role or roles based on the user's access requirements. You can choose from existing roles or create a custom role with specific privileges.</p>
+                            <p>Under the &quot;Database User Privileges&quot; section, you can define the user's privileges. Select the appropriate role or roles based on the user's access requirements. You can choose from existing roles or create a custom role with specific privileges.</p>
                         </li>
                         <li>
-                            <p>Click the "Add User" button to create the user.</p>
+                            <p>Click the &quot;Add User&quot; button to create the user.</p>
                         </li>
                     </ol>
 
