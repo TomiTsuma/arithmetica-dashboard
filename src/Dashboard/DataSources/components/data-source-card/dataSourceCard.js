@@ -4,7 +4,7 @@ import { dataSourcesConstants } from '@/constants/dataSourcesConstants'
 
 export default function DataSourceCard(props){
     return(
-        <Card  variant="elevated" raised={true} elevation={10}>
+        <Card  variant="elevated" raised={true} elevation={10} onClick={props.onDataSourceSelected}>
             <div className="data-source-card-container">
                 <div className="data-source-card-title">
                     <h2 style={{alignSelf:'flex-start', fontSize:'0.8rem', marginBottom:'0pt', marginTop: '2pt'}}>{props.name}</h2>

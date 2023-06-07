@@ -6,6 +6,7 @@ import LineGraph from "@/components/visualizations/line";
 import BarGraph from "@/components/visualizations/bar";
 import { useState, useEffect} from 'react'
 import { DataSourceSelection } from "../../DataSources/components/dataSourceSelection";
+import QuerySelection from "@/Dashboard/DataSources/components/querySelection";
 
 
 export default function Financials(){
@@ -123,8 +124,15 @@ export default function Financials(){
     const [monthlyGrossValue, setMonthlyGrossValue] = useState([])
     const [monthlyNetValue, setMonthlyNetValue] = useState([])
     const [dataSourcesWidgetVisible, showDataSourcesWidget] = useState(false) 
+    const [queryWidgetVisible, showQueryWidget] = useState(false) 
 
     const selectDataSource=()=>{
+        showDataSourcesWidget(true)
+
+    }
+    const selectQuery=()=>{
+        showQueryWidget(true)
+        showDataSourcesWidget(false)
 
     }
     return(
@@ -132,7 +140,10 @@ export default function Financials(){
                 <h1>Robodine</h1>
                 {
                     dataSourcesWidgetVisible?
-                    <DataSourceSelection></DataSourceSelection>
+                    <DataSourceSelection onDataSourceSelected={selectQuery}></DataSourceSelection>
+                    :
+                    queryWidgetVisible?
+                    <QuerySelection></QuerySelection>
                     :
                     null
                 }
@@ -140,7 +151,7 @@ export default function Financials(){
                 <div style={{ width:'100%', display: "flex", flexDirection:"row", justifyContent:'space-between' }}>
                     <div style={{ width:'65%', display: "flex", flexDirection:"column" , alignItems:'flex-start'}}>
                         <div style={{ width:'100%', display: "flex", flexDirection:"row", justifyContent:'space-between' }}>
-                            <DataCard title={'Monthly Recurring Revenue'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
+                            <DataCard title={'Monthly Recurring Revenue'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data} selectDataSource={selectDataSource}></DataCard>
                             <DataCard title={'Average Contract Value'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
                             <DataCard title={'Monthly Gross Value'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>
                             <DataCard title={'Monthly Net Value'} x={['uv']} width={'40%'} height={'40%'} type='bar' data={data}></DataCard>

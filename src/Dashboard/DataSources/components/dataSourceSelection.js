@@ -4,7 +4,7 @@ import DataSourceCard from "./data-source-card/dataSourceCard"
 import { useState, useEffect } from "react"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-export function DataSourceSelection(){
+export function DataSourceSelection(props){
     const [dataSources, setDataSources] = useState([])
 
     useEffect(() => {
@@ -54,7 +54,8 @@ export function DataSourceSelection(){
                             key={dataSource.id}
                             name={dataSource.name}
                             type={dataSource.type}
-                            url={dataSource.url}>
+                            url={dataSource.url}
+                            onDataSourceSelected={props.onDataSourceSelected}>
                             </DataSourceCard>
                         )}                
                         )
