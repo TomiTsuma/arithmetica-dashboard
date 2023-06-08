@@ -7,6 +7,7 @@ import BarGraph from "@/components/visualizations/bar";
 import { useState, useEffect} from 'react'
 import { DataSourceSelection } from "../../DataSources/components/dataSourceSelection";
 import QuerySelection from "@/Dashboard/DataSources/components/querySelection";
+import CustomWidget from "@/Dashboard/FinancialAnalytics/components/custom-widget/customWidget";
 
 
 export default function Financials(){
@@ -124,7 +125,35 @@ export default function Financials(){
     const [monthlyGrossValue, setMonthlyGrossValue] = useState([])
     const [monthlyNetValue, setMonthlyNetValue] = useState([])
     const [dataSourcesWidgetVisible, showDataSourcesWidget] = useState(false) 
-    const [queryWidgetVisible, showQueryWidget] = useState(false) 
+    const [queryWidgetVisible, showQueryWidget] = useState(false)
+
+    const [customMetrics, setCustomMetrics] = useState([
+        {
+            id: 1,
+            name: 'Monthly Recurring Revenue',
+            data: mrr
+        },
+        {
+            id: 2,
+            name: 'Average Monthly Recurring Revenue',
+            data: mrr
+        },
+        {
+            id: 3,
+            name: 'Net Revenue',
+            data: mrr
+        },
+        {
+            id: 4,
+            name: 'Fees',
+            data: mrr
+        },
+        {
+            id: 5,
+            name: 'Annual Run Rate',
+            data: mrr
+        }
+    ])
 
     const selectDataSource=()=>{
         showDataSourcesWidget(true)
@@ -177,8 +206,16 @@ export default function Financials(){
                             width = {'100%'}
                             xaxis = {'name'}
                             yaxis = {'uv'}
+                            type = {'natural'}
                             height = {400}></LineGraph>
 
+                        </div>
+                        <div className="custom-widget-container">
+                            {
+                                customMetrics.map((metric)=>{
+                                    return <CustomWidget key={metric.id} name={metric.name} data={metric.data}></CustomWidget>
+                                })
+                            }
                         </div>
                             
                     </div>

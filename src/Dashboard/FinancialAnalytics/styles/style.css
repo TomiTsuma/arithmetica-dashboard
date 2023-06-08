@@ -1,9 +1,9 @@
 .section-container{
-    width: 86.7vw;
+    width: 86.7svw;
     min-height: 100vh;
     top: 0;
     left: 0;
-    margin-left: 4.6vw;
+    margin-left: 3vw;
     margin-top: -1vh;
     background-color: #02546410;
     display: flex;
@@ -12,7 +12,7 @@
     align-items: flex-start;
     padding-left: 50pt;
     padding-right: 50pt;
-    padding-top: 50pt;
+    padding-top: 5pt;
 }
 
 .top-container{
@@ -159,4 +159,22 @@ text-align: center;
 
 .financial-monitoring-container .financial-monitoring-graphs .bar-graph-container{
     rotate: 90deg;
+}
+
+.custom-widget-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    row-gap: 20px;
+    margin-top: 20pt;
+}
+
+.custom-metric-container{
+    width: 90%;
+    height: 200pt;
+    background-color: #fbfffe;
+    border: solid 1pt #07060050;
+    border-radius: 8pt;
+    padding: 10pt;
 }

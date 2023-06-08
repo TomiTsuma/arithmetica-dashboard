@@ -41,9 +41,29 @@ export default function LineGraph (props){
             bottom: 0,
           }}          
         >
-        <CartesianGrid strokeDasharray="3 3" />
+
+        {
+          props.no_grid == true?
+          null
+          :
+          <CartesianGrid strokeDasharray="3 3" />
+        }
+        
+       
+        {
+          props.no_axes == true?
+          null
+          :
           <XAxis dataKey={props.xaxis} fontFamily='Catamaran-Medium' color='#FFF' style={{color:"FFF"}} fontSize={10}></XAxis>
+        }
+        {
+          props.no_axes == true?
+          null
+          :
           <YAxis dataKey={props.yaxis} fontFamily='Catamaran-Medium'  color='#FFF' style={{color:"FFF"}} fontSize={10}></YAxis>
+        }
+
+
           <Tooltip labelStyle={{fontFamily: 'Catamaran-Medium'}}></Tooltip>
           <defs>
             <linearGradient id="color1" x1="0" y1="0" x2="0" y2="1">
@@ -57,7 +77,7 @@ export default function LineGraph (props){
           </defs>
           {
             gradients.map((grad) =>{
-              return <Area key={grad.keyName} type="natural" dataKey={grad.keyName} stroke="#8884d8" fillOpacity={1} fill={grad.gradient}/>
+              return <Area key={grad.keyName} type={props.type} dataKey={grad.keyName} stroke="#8884d8" fillOpacity={1} fill={grad.gradient}/>
             })
           }
         </AreaChart>
