@@ -34,9 +34,29 @@ export default function DataSources(){
                 subtype: 'Atlas',
                 url:'https://www.turing.com/blog/wp-content/uploads/2022/02/Mongo-DB-Features.jpg',
                 id:3
+            },
+            {
+                name:'MyAWSRDS',
+                type: 'AWS',
+                subtype: 'MySQL',
+                url:'https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png',
+                id:2
+            },
+            {
+                name:'MyMongoDBAtlas',
+                type: 'MongoDB',
+                subtype: 'Atlas',
+                url:'https://www.turing.com/blog/wp-content/uploads/2022/02/Mongo-DB-Features.jpg',
+                id:3
+            },
+            {
+                name:'MyMongoDBAtlas',
+                type: 'MongoDB',
+                subtype: 'Atlas',
+                url:'https://www.turing.com/blog/wp-content/uploads/2022/02/Mongo-DB-Features.jpg',
+                id:3
             }
         ]
-
       )
     
       return () => {
@@ -67,7 +87,6 @@ export default function DataSources(){
                 )
         }
 
-            <FontAwesomeIcon icon={faPlus} color="#C2C2C2" style={{fontSize:"5rem", alignSelf:'center', marginLeft:"80pt"}} className="add-data-source-icon"></FontAwesomeIcon>
         </div>
 
         <div className="data-sources-accordion">

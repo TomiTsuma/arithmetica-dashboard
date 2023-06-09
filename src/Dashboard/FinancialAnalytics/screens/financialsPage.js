@@ -10,6 +10,8 @@ import QuerySelection from "@/Dashboard/DataSources/components/querySelection";
 import CustomWidget from "@/Dashboard/FinancialAnalytics/components/custom-widget/customWidget";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { colors } from "@/constants/colors";
+import BreakDown from "../components/breakdownContainer/breakDown";
 
 
 export default function Financials(){
@@ -299,17 +301,13 @@ export default function Financials(){
                             x = {['dv']}></BarGraph>
                         </div>
                     </div>
-                        </div>                        
-                        <div className="breakdown-container" style={{marginTop: '10pt'}}>
-                            <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-                                <h2 style={{margin:'0pt'}}>Breakdown</h2>
-                                <div style={{width:'30%', height:'25pt', background:'#FFF', border:'solid 1pt #C2C2C240', borderRadius:'5pt', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between', paddingLeft:'5pt', paddingRight:'5pt' }}>
-                                    <p style={{textAlign:'left', left:0, color:'#C2C2C2', fontSize:'1rem'}}>This Month</p>
-                                    <FontAwesomeIcon icon={faSortDown} style={{color:'#000'}}></FontAwesomeIcon>
-                                </div>
-                                
-                            </div>
                         </div>
+                        {
+                            customMetrics.map((metric)=>{
+                                return <BreakDown key='id' title={metric.name}></BreakDown>
+                            })
+                        }                        
+                        
                     </div>
                 </div>
                 

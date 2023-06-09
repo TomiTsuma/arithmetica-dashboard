@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SideNav from "@/components/side-nav";
 import Financials from "@/Dashboard/FinancialAnalytics/screens/financialsPage";
+import DataSources from "@/Dashboard/DataSources/screens/dataSources";
 
 
 export default function Home() {
