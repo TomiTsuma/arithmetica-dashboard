@@ -45,12 +45,34 @@
     position: fixed;
     left: 0;
     top: 0;
-    padding-top: 50pt;
+    z-index: 2;
+    padding-top: 30pt;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    padding-left: 10pt;
+    padding-right: 10pt;
 }
+
+.side-navbar-container:hover{
+    height: 100vh;
+    width: 10vw;
+    background-color: #025464;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    padding-top: 30pt;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    transition: width 0.3s ease-in-out;
+}
+
 
 .side-navbar-container .logo{
     background-image: url('../../assets/img/robodine.png');
@@ -59,21 +81,30 @@
     width: 50pt;
     border-radius: 50pt;
     margin-bottom: 20pt;
-
+    align-self: center;
 }
 
-.side-navbar-container .icon{
-    height: 40pt;
-    width: undefined;
-    aspect-ratio: 1 / 1;
-    margin-top: 10pt;
+.icon{
+    height: 50pt;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.nav-container .selections-container h2{
-    font-size: 1.2rem;
-    color: #070600;
+.icon:hover{
+    height: 50pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8pt;
+    box-shadow: 0px 4px 0px #fbfffe;
 }
+
+.icon h2{
+    color: #fbfffe;
+    font-size: 1.0rem;
+}
+
+
