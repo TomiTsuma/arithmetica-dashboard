@@ -1,0 +1,7 @@
+.custom-tooltip {
+    background-color: #07060070;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}

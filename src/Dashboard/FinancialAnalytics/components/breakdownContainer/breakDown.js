@@ -3,17 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../../styles/style.css'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { colors } from '@/constants/colors'
+import { commafyNumber } from '@/helpers/commafy'
+import DropDown from '@/components/dropdown/dropDown'
 export default function BreakDown(props){
     return(
         <div className="breakdown-container" style={{marginTop: '10pt'}}>
                             <h3>{props.title}</h3>
-                            <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                            <div style={{width:'95%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                         
                                 <h2 style={{margin:'0pt'}}>Breakdown</h2>
-                                <div style={{width:'30%', height:'25pt', background:'#FFF', border:'solid 1pt #C2C2C240', borderRadius:'5pt', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between', paddingLeft:'5pt', paddingRight:'5pt' }}>
-                                    <p style={{textAlign:'left', left:0, color:'#C2C2C2', fontSize:'1rem'}}>Monthly</p>
-                                    <FontAwesomeIcon icon={faSortDown} style={{color:'#000'}}></FontAwesomeIcon>
-                                </div>
+                                <DropDown 
+                                list={[{id:1, name:'Daily'},{id:2, name:'Monthly'},{id:3, name:'Annually'}]}
+                                width={'45%'}></DropDown>
                             </div>
                             <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                                 <p style={{marginBottom: '0pt'}}>Best</p>
@@ -21,7 +22,7 @@ export default function BreakDown(props){
                             </div>
                             <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                                 <p style={{marginBottom: '0pt'}}>Average</p>
-                                <p style={{color: colors.green, marginBottom: '0pt'}}>43,000</p>
+                                <p style={{color: colors.green, marginBottom: '0pt'}}>{commafyNumber(43000)}</p>
                             </div>
                             <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                                 <p style={{marginBottom: '0pt'}}>Average Growth Rate</p>

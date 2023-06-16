@@ -6,6 +6,7 @@ import { Chip } from '@mui/material'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAdjust, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import LineGraph from '@/components/visualizations/line'
+import { commafyNumber } from '@/helpers/commafy'
 
 export default function CustomWidget(props){
     const [title, setTitle] = useState()
@@ -51,8 +52,8 @@ export default function CustomWidget(props){
             <h2 style={{color: colors.text, fontSize: '0.8rem', margin:'0pt'}}>{title}</h2>
             <div style={{display:'flex', flexDirection:'row', width:'100%', alignItems:'flex-end', justifyContent:'space-between'}}>
                 <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-                <h1 style={{color: colors.secondary, fontSize:'1.2rem'}}>KES {props.data[props.data.length -1]['uv']}</h1>
-                <p style={{fontSize:'0.6rem', marginLeft:'5pt'}}>from {props.data[props.data.length -2]['uv']}</p>
+                <h1 style={{color: colors.secondary, fontSize:'1.2rem'}}>KES {commafyNumber(props.data[props.data.length -1]['uv'])}</h1>
+                <p style={{fontSize:'0.6rem', marginLeft:'5pt'}}>from {commafyNumber(props.data[props.data.length -2]['uv'])}</p>
                 </div>
                 <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
                 <div style={{backgroundColor:chip.color, padding:'5pt', borderRadius:'20pt', width:'5pt', height:'5pt', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>

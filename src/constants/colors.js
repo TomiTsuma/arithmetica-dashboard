@@ -12,5 +12,4 @@ export  const colors = {
     graph_main:'#2f004f',
     graph_secondary:'#fe9000',
     graph_tertiary:'#04e824',
-
 }

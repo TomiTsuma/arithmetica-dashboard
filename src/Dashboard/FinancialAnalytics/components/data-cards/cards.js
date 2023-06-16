@@ -1,11 +1,11 @@
 'use client';
-import '../../assets/style/card.css'
+import '../../styles/card.css'
 import { Card } from '@mui/material';
-import BarGraph from '../visualizations/bar';
+import BarGraph from '../../../../components/visualizations/bar';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import LineGraph from '../visualizations/line';
+import LineGraph from '../../../../components/visualizations/line';
 export default function DataCard(props){
   useEffect(() => {
     console.log(props)

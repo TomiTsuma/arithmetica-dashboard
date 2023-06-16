@@ -38,6 +38,11 @@
     src: url('../font/Catamaran-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: 'Gothic-Bold';
+    src: url('../font/bold.ttf');
+}
+
 h1{
     font-family: 'Catamaran-ExtraBold';
     color: #070600;
