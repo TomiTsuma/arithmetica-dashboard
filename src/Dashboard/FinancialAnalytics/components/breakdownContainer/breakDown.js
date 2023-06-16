@@ -14,6 +14,9 @@ export default function BreakDown(props){
                                 <h2 style={{margin:'0pt'}}>Breakdown</h2>
                                 <DropDown 
                                 list={[{id:1, name:'Daily'},{id:2, name:'Monthly'},{id:3, name:'Annually'}]}
+                                onSelectItem={(item)=>{
+                                    
+                                }}
                                 width={'45%'}></DropDown>
                             </div>
                             <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>

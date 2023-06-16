@@ -1,9 +1,9 @@
 import GradientButton from '@/components/button'
 import OutlineButton from '@/components/outline-button'
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material'
-export default function CSVAccordion(){
+export default function CSVAccordion(props){
     return(
-        <Accordion>
+        <Accordion expanded={props.expanded}>
             <AccordionSummary aria-controls="accordion-content" id="accordion-header">
                 <h1 style={{margin:'0pt', fontSize:'1.5em'}}>
                     CSV & Excel Files
@@ -29,8 +29,7 @@ export default function CSVAccordion(){
                         <p style={{textAlign:'left', left:0, color:'#C2C2C2', fontSize:'1rem'}}>Data Source Name</p>
                     </div>
                     </ol>
-                    <GradientButton title={'Connect'} style={{height: '20pt', width:'120pt'}}></GradientButton>
-
+                    <GradientButton title={'Connect'} style={{ width:'80pt', height:'30pt' }}></GradientButton>
             </Typography>
             </AccordionDetails>
         </Accordion>

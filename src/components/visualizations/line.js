@@ -31,7 +31,6 @@ export default function LineGraph (props){
    
 
   return (
-    <div className='line-graph-container'>
     <ResponsiveContainer width={props.width} height={props.height}>
     <AreaChart
           data={props.data}
@@ -84,6 +83,5 @@ export default function LineGraph (props){
         </AreaChart>
     
   </ResponsiveContainer>
-  </div>
   );
 };

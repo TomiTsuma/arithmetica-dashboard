@@ -2,9 +2,9 @@ import GradientButton from '@/components/button'
 import { colors } from '@/constants/colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material'
-export default function MongoDBAccordion(){
+export default function MongoDBAccordion(props){
     return(
-        <Accordion>
+        <Accordion expanded={props.expanded}>
             <AccordionSummary aria-controls="accordion-content" id="accordion-header">
                 <h1 style={{margin:'0pt', fontSize:'1.5em'}}>
                     MongoDB Atlas
@@ -61,7 +61,7 @@ export default function MongoDBAccordion(){
                         <p style={{textAlign:'left', left:0, color:'#000', fontSize:'1rem'}}>.mongodb.net</p>
                     </div>
 
-                    <GradientButton title={'Connect'}></GradientButton>
+                    <GradientButton title={'Connect'} style={{ width:'80pt', height:'30pt' }}></GradientButton>
                 </div>
 
             </Typography>

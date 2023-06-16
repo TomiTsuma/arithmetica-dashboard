@@ -14,7 +14,7 @@ export default function Home() {
     <SideNav></SideNav>
         <Routes>
             <Route path='/'>
-                <Route index element={<Financials/>}></Route>
+                <Route index element={<Forecasting/>}></Route>
             </Route>
         </Routes>
     </BrowserRouter>

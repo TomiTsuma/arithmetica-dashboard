@@ -9,7 +9,7 @@ export default function DropDown(props){
     const [isListVisible, showList] = useState(false)
 
     return(
-        <div style={{width: props.width}}>
+        <div style={{width: props.width }}>
         <div 
         onClick={()=>{showList(!isListVisible)}}
         style={{width: '100%', height:'25pt', background:'#FFF', border:'solid 1pt #C2C2C240', borderRadius:'5pt', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between', paddingLeft:'5pt', paddingRight:'5pt' }}>
@@ -22,12 +22,14 @@ export default function DropDown(props){
             containerStyle={
                 {
                     position: 'absolute',
-                    width: '10%'
+                    minWidth: '10%',
+                    zIndex:3
                 }
             }
             onSelectItem={(item)=>{
                 setValue(item)
                 showList(false)
+                props.onSelectItem(item)
             }}
             list={list}
             ></ListView>

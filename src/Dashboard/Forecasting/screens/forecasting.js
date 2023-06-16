@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import BarGraph from "@/components/visualizations/bar"
 import LineGraph from "@/components/visualizations/line"
 import TextInput from "@/components/textField"
+import { commafyNumber } from "@/helpers/commafy"
+import DropDown from "@/components/dropdown/dropDown"
 
 export default function Forecasting(){
     const [revenueForecast, setRevenueForecast] = useState([])
@@ -15,6 +17,35 @@ export default function Forecasting(){
         unit: 'Months',
         steps: 6,
     })
+    const units = [
+      {
+        id:1,
+        name: 'Days'
+      },
+      {
+        id:2,
+        name: 'Month'
+      },
+      {
+        id:3,
+        name: 'Years'
+      },
+    ]
+
+    const steps = [
+      {
+        id:1,
+        name: 6
+      },
+      {
+        id:2,
+        name: 9
+      },
+      {
+        id:3,
+        name: 12
+      },
+    ]
 
     useEffect(() => {
       setRevenueForecast([
@@ -334,11 +365,11 @@ export default function Forecasting(){
                     <div style={{ width: '40%', display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:'40vh', alignSelf:'flex-start' }}>
                         <h2 className="metric-title">Revenue</h2>
                         <div style={{display:'flex', flexDirection:'row', alignItems:'flex-end'}}>
-                            <h1 style={{margin:'0pt'}}>KSh. {revenueForecast.reduce((accumulator, current) =>{ return accumulator + current.uv;}, 0)}</h1>
+                            <h1 style={{margin:'0pt'}}>KSh. {commafyNumber(revenueForecast.reduce((accumulator, current) =>{ return accumulator + current.uv;}, 0))}</h1>
                             <h2 style={{color: '#C2C2C2', fontSize:'1.2rem', marginLeft:'10pt'}}>Next 12 months</h2>
                         </div>
                         <p style={{fontSize:'1.5rem'}}>
-                        "Over the next 12 months you'll bill KSh 10550 from your customers with a growth rate of 12%"
+                        {`Over the next 12 months you'll bill KSh ${commafyNumber(revenueForecast.reduce((accumulator, current) =>{ return accumulator + current.uv;}, 0))} from your customers with a growth rate of 12%`}
                         </p>
                         
                     </div>
@@ -365,19 +396,92 @@ export default function Forecasting(){
                     <div style={{ width: '40%', display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:'40vh', alignSelf:'flex-start' }}>
                         <h2 className="metric-title">Monthly Recurring Revenue</h2>
                         <div style={{display:'flex', flexDirection:'row', alignItems:'flex-end'}}>
-                            <h1 style={{margin:'0pt'}}>KSh. {revenueForecast.reduce((accumulator, current) =>{ return accumulator + current.pv;}, 0)}</h1>
-                            <h2 style={{color: '#C2C2C2', fontSize:'1.2rem', marginLeft:'10pt'}}>Next 12 months</h2>
+                            <h1 style={{margin:'0pt'}}>KSh. {commafyNumber(revenueForecast.reduce((accumulator, current) =>{ return accumulator + current.pv;}, 0))}</h1>
+                            <h2 style={{color: '#C2C2C2', fontSize:'1.2rem', marginLeft:'10pt'}}>Next {timeUnit.steps} {timeUnit.unit}</h2>
                         </div>
                         <p style={{fontSize:'1.5rem'}}>
-                        "Over the next {timeUnit.steps} {timeUnit.unit} your MRR KSh 24,012 from your customers with a growth rate of 12%"
+                        Over the next {timeUnit.steps} {timeUnit.unit} your MRR will be KSh {commafyNumber(revenueForecast.reduce((accumulator, current) =>{ return accumulator + current.pv;}, 0))} with a growth rate of 12%`
                         </p>
                         <div className="forecasting-parameter">
                             <h2>Time Units</h2>
-                            <TextInput hint={'Select a Time Unit to use'}></TextInput>
+                            <DropDown 
+                                list={units}
+                                onSelectItem={(item)=>{
+                                    setTimeUnit({
+                                      unit: item,
+                                      steps: timeUnit.steps
+                                    })
+                                }}
+                                width={'45%'}></DropDown>
                         </div>
                         <div className="forecasting-parameter">
                             <h2>Steps</h2>
-                            <TextInput hint={'Number of steps to predict'}></TextInput>
+                            <DropDown 
+                                list={steps}
+                                onSelectItem={(item)=>{
+                                  setTimeUnit({
+                                    unit: timeUnit.unit,
+                                    steps: item
+                                  })
+                                }}
+                                width={'45%'}></DropDown>
+                        </div>
+                        
+                    </div>
+
+                    <div style={{ width: '60%', height:'100%', display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'flex-end' }}>
+                        <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+                            <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
+                            <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
+                        </div>
+                        <LineGraph
+                            keys = {['pv']}
+                            data = {mrrForecast.slice(0, timeUnit.steps)}
+                            height = {'80%'}
+                            width = {'100%'}
+                            xaxis = {'name'}
+                            yaxis = {'pv'}
+                            type={'natural'}
+                            ></LineGraph>
+                    
+
+                    </div>
+
+                </div>
+
+                <div className="metric-forecast-container">
+                    <div style={{ width: '40%', display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:'40vh', alignSelf:'flex-start' }}>
+                        <h2 className="metric-title">Customers</h2>
+                        <div style={{display:'flex', flexDirection:'row', alignItems:'flex-end'}}>
+                            <h1 style={{margin:'0pt'}}>{commafyNumber(userForecast.reduce((accumulator, current) =>{ return accumulator + current.pv;}, 0))}</h1>
+                            <h2 style={{color: '#C2C2C2', fontSize:'1.2rem', marginLeft:'10pt'}}>Next 12 months</h2>
+                        </div>
+                        <p style={{fontSize:'1.5rem'}}>
+                        "Over the next {timeUnit.steps} {timeUnit.unit} you'll have {commafyNumber(userForecast.reduce((accumulator, current) =>{ return accumulator + current.pv;}, 0))} customers with a growth rate of 12%"
+                        </p>
+                        <div className="forecasting-parameter">
+                            <h2>Time Units</h2>
+                            <DropDown 
+                                list={units}
+                                onSelectItem={(item)=>{
+                                    setTimeUnit({
+                                      unit: item,
+                                      steps: timeUnit.steps
+                                    })
+                                }}
+                                width={'45%'}></DropDown>
+                        </div>
+                        <div className="forecasting-parameter">
+                            <h2>Steps</h2>
+                            <DropDown 
+                                list={steps}
+                                onSelectItem={(item)=>{
+                                  setTimeUnit({
+                                    unit: timeUnit.unit,
+                                    steps: item
+                                  })
+                                }}
+                                width={'45%'}></DropDown>
                         </div>
                         
                     </div>
@@ -389,50 +493,13 @@ export default function Forecasting(){
                         </div>
                         <LineGraph
                             keys = {['pv']}
-                            data = {mrrForecast}
-                            width = {600}
+                            data = {userForecast.slice(0, timeUnit.steps)}
+                            height = {'80%'}
+                            width = {'100%'}
                             xaxis = {'name'}
-                            yaxis = {'uv'}
-                            height = {400}></LineGraph>
-                    
-
-                    </div>
-
-                </div>
-
-                <div className="metric-forecast-container">
-                    <div style={{ width: '40%', display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:'40vh', alignSelf:'flex-start' }}>
-                        <h2 className="metric-title">Customers</h2>
-                        <div style={{display:'flex', flexDirection:'row', alignItems:'flex-end'}}>
-                            <h1 style={{margin:'0pt'}}>{userForecast.reduce((accumulator, current) =>{ return accumulator + current.pv;}, 0)}</h1>
-                            <h2 style={{color: '#C2C2C2', fontSize:'1.2rem', marginLeft:'10pt'}}>Next 12 months</h2>
-                        </div>
-                        <p style={{fontSize:'1.5rem'}}>
-                        "Over the next {timeUnit.steps} {timeUnit.unit} you'll have 181 customers with a growth rate of 12%"
-                        </p>
-                        <div className="forecasting-parameter">
-                            <h2>Time Units</h2>
-                            <TextInput hint={'Select a Time Unit to use'}></TextInput>
-                        </div>
-                        <div className="forecasting-parameter">
-                            <h2>Steps</h2>
-                            <TextInput hint={'Number of steps to predict'}></TextInput>
-                        </div>
-                        
-                    </div>
-
-                    <div style={{ width: '60%', display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'flex-end', height:'100%' }}>
-                        <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-                            <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
-                            <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
-                        </div>
-                        <LineGraph
-                            keys = {['uv']}
-                            data = {mrrForecast}
-                            width = {600}
-                            xaxis = {'name'}
-                            yaxis = {'uv'}
-                            height = {400}></LineGraph>
+                            yaxis = {'pv'}
+                            type={'natural'}
+                            ></LineGraph>
                     
 
                     </div>

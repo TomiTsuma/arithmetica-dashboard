@@ -1,9 +1,10 @@
+import GradientButton from '@/components/button'
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Paper } from '@mui/material'
 
 const inst = '{\n"Version": "2012-10-17",\n"Statement": [\n{\n"Action": [\n "rds:Describe*",\n"rds:List*",\n"pi:DescribeDimensionKeys",\n"pi:GetResourceMetrics",\n"cloudwatch:Get*",\n"cloudwatch:List*",\n"cloudwatch:Describe*",\n"ce:Get*",\n"ce:List*",\n"ce:Describe*",\n"budgets:Describe*",\n"iam:SimulatePrincipalPolicy"\n],\n"Resource": [\n    "*"\n],\n"Effect": "Allow"\n},\n{\n"Action": [\n    "rds-db:connect"\n],\n"Resource": [\n    "arn:aws:rds-db:*:*:dbuser:*/core&outline*"\n],\n"Effect": "Allow"\n}\n]\n}'
-export default function AWSAccordion(){
+export default function AWSAccordion(props){
     return(
-        <Accordion>
+        <Accordion expanded={props.expanded}>
             <AccordionSummary aria-controls="accordion-content" id="accordion-header">
                 <h1 style={{marginTop:'5pt', marginBottom:'5pt',fontSize:'1.5rem'}}>
                     AWS IAM Console
@@ -43,6 +44,7 @@ export default function AWSAccordion(){
                 <h2 style={{color:"#000", fontSize:'1rem'}}>Enter in your AWS Account ID and IAM Role Name and then press connect.</h2>
                 </li>
                 </ol>
+                <GradientButton title={'Connect'} style={{ width:'80pt', height:'30pt' }}></GradientButton>
             </Typography>
             </AccordionDetails>
         </Accordion>
