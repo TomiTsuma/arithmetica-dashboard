@@ -2,11 +2,23 @@ import { useEffect, useState } from "react";
 import "../../styles/style.css"
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DropDown from "@/components/dropdown/dropDown";
 
 export default function CustomerSegments(){
     const [filters, setFilters] = useState([])
 //Filters should be shown as chips in the add filters div
     const [customers, setCustomers] = useState([])
+    const [segments, setSegments] = useState([
+        {id:0, name:'Add a filter'},
+        {id:1, name:'High LTV'},
+        {id:2, name:'Low LTV'},
+        {id:3, name:'Churned'},
+        {id:4, name:'Repeat customers'},
+        {id:5, name:'Most recent'},
+        {id:6, name:'Almost churned'},
+        {id:7, name:'High ARPU'},
+        {id:8, name:'Low ARPU'},
+    ])
 
     useEffect(() => {
       setCustomers(
@@ -57,10 +69,13 @@ export default function CustomerSegments(){
         
             <div style={{ display: 'flex', flexDirection:'column', width:'30%', padding:'10pt'}}>
                 <div>
-                    <div style={{width:'100%', height:'35pt', background:'#FFF', border:'solid 2pt #C2C2C240', borderRadius:'5pt', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between', paddingLeft:'5pt', paddingRight:'5pt' }}>
-                        <p style={{textAlign:'left', left:0, color:'#C2C2C2', fontSize:'1rem'}}>Add a filter</p>
-                        <FontAwesomeIcon icon={faSortDown} style={{color:'#000'}}></FontAwesomeIcon>
-                    </div>
+                    <DropDown
+                        showItemsSelected={true}
+                        list={segments}
+                        onSelectItem={(item)=>{
+            
+                        }}>
+                    </DropDown>
 
                     <p style={{textAlign:'left', left:0, color:'#000', fontSize:'1rem'}}>
                     Add filters to segment your customers by dozens{'\n'}

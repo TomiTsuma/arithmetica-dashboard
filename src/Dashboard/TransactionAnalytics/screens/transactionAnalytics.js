@@ -4,9 +4,25 @@ import { useEffect, useState } from "react"
 import { faSortDown, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BarGraph from "@/components/visualizations/bar";
+import DropDown from "@/components/dropdown/dropDown";
 export default function TransactionAnalytics(){
     const [transactionValueCounts, setTransactionValueCounts] = useState([])
     const [transaction, setTransactions] = useState([])
+    const [units, setUnits] = useState([
+        {
+            id:1,
+            name:'Monthly'
+        },
+        {
+            id:2,
+            name:'Daily'
+        },
+        {
+            id:3,
+            name:'Yearly'
+        },
+    ])
+
     useEffect(() => {
         setTransactionValueCounts(
         [
@@ -103,15 +119,18 @@ export default function TransactionAnalytics(){
                             <h1 style={{fontSize:'1.5rem', alignSelf:'flex-start', marginLeft:'10pt'}}>Breakdown</h1>
                         </div>
 
-                        <div style={{display:'flex', flexDirection:'row', alignSelf:'flex-end', alignItems:'flex-start', margin:'5pt', marginRight:'10pt'}}>
-                            <div style={{display:'flex', flexDirection:'row', alignItems:'center', marginRight:'30pt'}}>
+                        <div style={{display:'flex', flexDirection:'row', alignSelf:'flex-end', alignItems:'flex-start', margin:'5pt', marginRight:'20pt'}}>
+                            <div style={{display:'flex', flexDirection:'row', alignItems:'center' }}>
                                 <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
-                                <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.2rem', marginLeft:'5pt'}}>Download CSV</h2>
+                                <h2 style={{color:'#C2C2C2', margin:'0pt', fontSize:'1.0rem', marginLeft:'5pt'}}>Download CSV</h2>
                             </div>
 
-                            <h2 style={{color:"#C2C2C2", fontSize:'1.2rem', marginRight:'10pt',marginTop:'0pt', marginBottom:'0pt'}}>Monthly</h2>
-                            <FontAwesomeIcon icon={faSortDown}></FontAwesomeIcon>
-                            
+                            <DropDown 
+                                list={units}
+                                onSelectItem={(item)=>{
+                                    
+                                }}
+                                width={'45%'}></DropDown>                            
                         </div>
 
                         <div>

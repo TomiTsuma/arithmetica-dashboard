@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     margin-left: 4.6vw;
-    margin-top: -1vh;
+    margin-top: -10vh;
     background-color: #02546410;
     display: flex;
     flex-direction: column;
@@ -36,8 +36,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 15pt;
-    padding-bottom: 15pt;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
 }
 
 .customer-location-transaction-container .section:hover{
@@ -48,8 +48,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 15pt;
-    padding-bottom: 15pt;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
 }
 
 .customer-location-transaction-container .section h2{
@@ -104,4 +104,17 @@
 .metric{
     padding-left: 10pt;
     width: 80%;
+}
+
+
+.customer-column{
+    margin-right: 1pt;
+}
+
+.customer-column h2{
+    font-size: 1rem;
+}
+
+.customer-column p{
+    font-size: 1rem;
 }

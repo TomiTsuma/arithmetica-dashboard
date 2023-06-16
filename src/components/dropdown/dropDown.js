@@ -1,12 +1,24 @@
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ListView from "../list-view/listView";
+import { Chip } from "@mui/material";
+import { colors } from "@/constants/colors";
 
 export default function DropDown(props){
     const [value, setValue] = useState(props.list[0]?.name)
     const [list, setList] = useState(props.list)
     const [isListVisible, showList] = useState(false)
+    const [itemsSelected, setItemsSelected] = useState([])
+
+    useEffect(() => {
+      setItemsSelected([])
+    
+      return () => {
+        
+      }
+    }, [])
+    
 
     return(
         <div style={{width: props.width }}>
@@ -29,13 +41,28 @@ export default function DropDown(props){
             onSelectItem={(item)=>{
                 setValue(item)
                 showList(false)
+                let i = itemsSelected
+                i.push(item)
                 props.onSelectItem(item)
+                setItemsSelected(i)
             }}
             list={list}
             ></ListView>
             :
             null
         }
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr'}}>
+        {
+            props.showItemsSelected?
+            itemsSelected.map((item)=>{
+                return (
+                    <Chip key={item} label={item} style={{maxWidth:'60pt', marginLeft:'2pt', marginTop:'2pt'}}></Chip>
+                    )
+            })
+            :
+            null
+        }
+        </div>
         </div>
     )
 }

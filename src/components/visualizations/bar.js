@@ -1,5 +1,6 @@
 import { BarChart, ResponsiveContainer, Bar, Tooltip, CartesianGrid, Legend } from "recharts";
 import { useEffect, useState } from "react";
+import CustomTooltip from "./tooltip";
 
 
 export default function BarGraph(props){
